@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+
 .container-main{
     display: flex;
     justify-content: center;
@@ -12,7 +15,7 @@
     width: 834px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-end;
     position: relative;
     margin-bottom: 50px;
 }
@@ -41,6 +44,11 @@
     align-items: center;
 }
 
+.container-game > h3 {
+    font-size: 40px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
 .container-letter{
     width: 625px;
     display: flex;
@@ -67,9 +75,36 @@
     justify-content: center;
     text-align: center;
 
-    /* color: #798A9F; */
     color: #39739d;
     text-transform: uppercase;
 }
+
+.container-letter > button:hover {
+    cursor: pointer;
+    background-color: #a4c3da;
+    color: #2c5777;
+}
+
+.container-letter > button:disabled {
+    cursor: default;
+    background-color: #9faab5;
+    color: #79818a;
+    border: 1px solid #9faab5;
+}
+
+.color-black{
+    color: black;
+}
+
+.color-green{
+    color: #27AE60;
+}
+
+.color-red{
+    color: #FF0000;
+}
+
+
+
 
 

@@ -1,11 +1,17 @@
 
-import alphabet from "../alphabet";
+import alfabeto from "../alfabeto";
 
-export default function Letras(){
+export default function Letras({onLetterClick, clickedLetters}){
+    const handleLetterClick = (letter) => {
+        onLetterClick(letter);
+      };
+
     return (
         <div className="container-letter">
-            {alphabet.map((item) => (
-                <button>{item}</button>
+            {alfabeto.map((item) => (
+                <button key={item} disabled={clickedLetters.includes(item)} onClick={() => handleLetterClick(item)}>
+                    {item}
+                </button>
             ))}
         </div>
     );
