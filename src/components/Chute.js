@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 
-export default function Chute({onChuteWord, disabled}){
+export default function Chute({ onChuteWord, disabled }) {
     const [chuteValue, setChuteValue] = useState("");
 
     const handleChuteChange = (event) => {
@@ -16,13 +16,16 @@ export default function Chute({onChuteWord, disabled}){
     return (
         <form className="container-chute" onSubmit={handleChuteSubmit}>
             <input
-            type="text"
-            value={chuteValue}
-            onChange={handleChuteChange}
-            placeholder="Digite sua palavra"
-            disabled={disabled}
+                data-test="guess-input"
+                type="text"
+                value={chuteValue}
+                onChange={handleChuteChange}
+                placeholder="Digite sua palavra"
+                disabled={disabled}
             />
-            <button type="submit">Chutar</button>
+            <button data-test="guess-button" type="submit">
+                Chutar
+            </button>
         </form>
     )
 }

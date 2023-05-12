@@ -9,7 +9,12 @@ export default function Letras({onLetterClick, clickedLetters}){
     return (
         <div className="container-letter">
             {alfabeto.map((item) => (
-                <button key={item} disabled={clickedLetters.includes(item)} onClick={() => handleLetterClick(item)}>
+                <button 
+                    data-test="letter"
+                    key={item} 
+                    disabled={clickedLetters.includes(item)} 
+                    onClick={() => handleLetterClick(item)}
+                >
                     {item}
                 </button>
             ))}

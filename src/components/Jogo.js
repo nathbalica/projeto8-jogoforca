@@ -12,11 +12,15 @@ export default function Jogo({startGame, onChooseWord, errors, colorWord}){
     console.log(errors)
     return (
         <div className="container-game">
-            <img src={stateGallows[errors]} alt="forca"/>
-            <button onClick={startGame}>
+            <img 
+                data-test="game-image"
+                src={stateGallows[errors]} 
+                alt="forca"
+            />
+            <button data-test="choose-word" onClick={startGame}>
                 Escolher Palavra
             </button>
-            <h3 className={colorWord}>{onChooseWord}</h3>
+            <h3 data-test="word" className={colorWord}>{onChooseWord}</h3>
         </div>
     )
 }
