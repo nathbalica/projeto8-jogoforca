@@ -12,7 +12,7 @@ export default function Jogo({startGame, onChooseWord, errors, colorWord}){
     console.log(errors)
     return (
         <div className="container-game">
-            <img src={stateGallows[errors]}/>
+            <img src={stateGallows[errors]} alt="forca"/>
             <button onClick={startGame}>
                 Escolher Palavra
             </button>

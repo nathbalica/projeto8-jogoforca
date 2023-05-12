@@ -55,6 +55,7 @@
     flex-wrap: wrap;
     align-items: center;
     margin-left: 60px;
+    margin-bottom: 40px;
 }
 
 .container-letter > button{
@@ -105,6 +106,43 @@
 }
 
 
+.container-chute{
+    width: 468px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-chute button{
+    width: 100px;
+    height: 100%;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    color: #3C76A1;
+    cursor: pointer;
+
+    background: #E1ECF4;
+    border: 1px solid #7AA7C7;
+    border-radius: 3px;
+
+}
+
+.container-chute input{
+    width: 353px;
+    height: 90%;
+
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+
+    color: #3C76A1;
+    font-size: 14px;
+}
 
 
 
