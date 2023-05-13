@@ -9,6 +9,7 @@
 
     width: 100vw;
     height: 100vh;
+    
 }
 
 .container-game{
@@ -78,6 +79,7 @@
 
     color: #39739d;
     text-transform: uppercase;
+
 }
 
 .container-letter > button:hover {

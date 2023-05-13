@@ -1,5 +1,6 @@
 
 import { useState } from "react";
+import { ContainerChute, ButtonChute, InputButton } from "./Styles";
 
 export default function Chute({ onChuteWord, disabled }) {
     const [chuteValue, setChuteValue] = useState("");
@@ -14,8 +15,8 @@ export default function Chute({ onChuteWord, disabled }) {
         setChuteValue("");
     };
     return (
-        <form className="container-chute" onSubmit={handleChuteSubmit}>
-            <input
+        <ContainerChute onSubmit={handleChuteSubmit}>
+            <InputButton
                 data-test="guess-input"
                 type="text"
                 value={chuteValue}
@@ -23,9 +24,9 @@ export default function Chute({ onChuteWord, disabled }) {
                 placeholder="Digite sua palavra"
                 disabled={disabled}
             />
-            <button data-test="guess-button" type="submit">
+            <ButtonChute data-test="guess-button" type="submit">
                 Chutar
-            </button>
-        </form>
+            </ButtonChute>
+        </ContainerChute>
     )
 }

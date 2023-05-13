@@ -1,5 +1,7 @@
 
+import {ContainerLetter, ButtonLetter} from "./Styles"
 import alfabeto from "../alfabeto";
+
 
 export default function Letras({onLetterClick, clickedLetters}){
     const handleLetterClick = (letter) => {
@@ -7,18 +9,18 @@ export default function Letras({onLetterClick, clickedLetters}){
       };
 
     return (
-        <div className="container-letter">
+        <ContainerLetter>
             {alfabeto.map((item) => (
-                <button 
+                <ButtonLetter 
                     data-test="letter"
                     key={item} 
                     disabled={clickedLetters.includes(item)} 
                     onClick={() => handleLetterClick(item)}
                 >
                     {item}
-                </button>
+                </ButtonLetter>
             ))}
-        </div>
+        </ContainerLetter>
     );
 }
 

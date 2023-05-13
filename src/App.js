@@ -5,6 +5,7 @@ import palavras from "./palavras";
 import alfabeto from "./alfabeto";
 import Chute from "./components/Chute";
 import { remove as removeDiacritics } from "diacritics";
+import { ContainerMain } from "./components/Styles"
 
 
 function App() {
@@ -106,7 +107,7 @@ function App() {
 
 
     return (
-      <div className='container-main'>
+      <ContainerMain>
         <Jogo startGame={startGame} onChooseWord={underWord} errors={errorCount} colorWord={colorWord}/>
         <Letras 
           onLetterClick={handleLetterClick} 
@@ -117,7 +118,7 @@ function App() {
           onChuteWord={handleChuteWord}
           disabled={!gameStarted || gameEnded}
         />
-      </div>
+      </ContainerMain>
     );
 }
 
